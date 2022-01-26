@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculul Limitelor de Folosinta Speciala A Apei"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <title>Calculul Limitelor de Folosinta Speciala A Apei | Principala</title>
+  </head>
+  <body id="home">
+    <!-- Navbar -->
+
+    <nav class="navbar">
+      <h1 class="logo">Calcul<span class="text-primary">Limite</span></h1>
+      <ul class="nav_links">
+        <li><a href="#irigare">Irigare</a></li>
+        <li><a href="#acvacultura">Acvacultura</a></li>
+        <li><a href="#populatie">Populatie</a></li>
+        <li><a href="#industrie">Industrie</a></li>
+        <li><a href="#agricultura">Agricultura</a></li>
+        <li><a class="menu_login" href="#">Autentificare</a></li>
+      </ul>
+      <div class="nav_menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <!-- Log in -->
+    <div class="login_container hidden" id="modal">
+      <div class="modal">
+        <button class="close_modal">&times;</button>
+        <div class="modal_title">
+          <h3>Autentificare</h3>
+        </div>
+        <form class="modal_form">
+          <div>
+            <label for="name">Numele ID</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Introduceti Numele de Identificare"
+              class="form_input"
+            />
+          </div>
+          <div>
+            <label for="password">Parola</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Introduceti parola"
+              class="form_input"
+            />
+          </div>
+          <button class="btn btn-login">Autentificare</button>
+        </form>
+      </div>
+    </div>
+    <!-- Banner -->
+    <header id="banner">
+      <div class="banner-content">
+        <h1 class="header-xlarge">
+          Calculele Limitelor de Folosinta Speciala a Apei
+        </h1>
+        <p class="lead">
+          Limitele de Folosinta Speciala a Apei se calculeaza in conformitate cu
+          "Metodologia ...."
+        </p>
+      </div>
+    </header>
+    <!-- Section: Sursa -->
+    <section class="section" id="info">
+      <h2 class="section_header">Descriere Generala</h2>
+      <div class="section_header-bottom_line"></div>
+      <p class="db_info">
+        Aceasta sectiune va contine informatie generala despre sursa de apa,
+        corpul de apa, coordonatele punctelor de captare si deversare etc.
+      </p>
+      <br />
+      <p class="db_info">
+        Informatia din acesta sectiune va fi extrasa automat din baza de date
+        dupa ce specialistul s-a autentificat in sistem
+      </p>
+      <br />
+      <div class="sursa_info">
+        <div class="sursa_grup">
+          <h2 class="sursa_captare">Punct de captare</h2>
+          <input
+            type="number"
+            class="sursa_input"
+            id="sursa_captare-long"
+            placeholder="Longitudine"
+            disabled
+          />
+          <input
+            type="number"
+            class="sursa_input"
+            id="sursa_captare-lat"
+            placeholder="Latitudine"
+            disabled
+          />
+        </div>
+        <div class="sursa_grup">
+          <h2 class="sursa_captare">Punct de deversare</h2>
+          <input
+            type="number"
+            class="sursa_input"
+            id="sursa_deversare-long"
+            placeholder="Longitudine"
+            disabled
+          />
+          <input
+            type="number"
+            class="sursa_input"
+            id="sursa_deversare-lat"
+            placeholder="Latitudine"
+            disabled
+          />
+        </div>
+        <div class="sursa_grup volum_disponibil">
+          <h2>Volumul de apa disponibil</h2>
+          <input
+            type="number"
+            class="sursa_input"
+            id="sursa_volum-disponibil"
+            placeholder="m3"
+            disabled
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Section: Acvacultura -->
+
+    <!-- Section: Irigare -->
+    <section class="section" id="irigare">
+      <h2 class="section_header">Irigare</h2>
+      <div class="section_header-bottom_line"></div>
+      <div class="section_item">
+        <h2 class="section_item-title">
+          Calculul necesarului de apă pentru irigarea subterana
+        </h2>
+      </div>
+      <div class="section_item-content">
+        <p class="py-1">
+          Cantitatea de apă care poate pătrunde în sol prin pereții poroși ai
+          conductei de irigație, la unitatea de lungime și unitatea de timp,
+          este direct proporțională cu suprafața și presiunea apei.
+        </p>
+        <br />
+        <div class="form_input_group py-1">
+          <form>
+            <fieldset>
+              <legend>Irigare subterana</legend>
+
+              <div>
+                <h3>1. Distanta dintre tuburi (m)</h3>
+                <p class="text">
+                  Distanta dintre tuburi se va folosi in p. 2 la calcularea
+                  debitului de apa la irigare subterana.
+                </p>
+              </div>
+              <div class="radio_btns">
+                <div class="select_options">
+                  <h3>Selectati optiunea</h3>
+                </div>
+                <div>
+                  <input
+                    class="radio_input"
+                    type="radio"
+                    value="Valoare cunoscuta"
+                    name="irigatie_distanta_tuburi"
+                    id="irigatie_distanta_tuburi_optiune-cunoscuta"
+                  />
+                  <label
+                    class="radio_label"
+                    for="irigatie_distanta_tuburi_optiune-cunoscuta"
+                    >Valoare cunoscuta</label
+                  >
+                  <input
+                    class="radio_input"
+                    type="radio"
+                    value="Valoare calculata"
+                    name="irigatie_distanta_tuburi"
+                    id="irigatie_distanta_tuburi_optiune-calculat"
+                  />
+                  <label
+                    class="radio_label"
+                    for="irigatie_distanta_tuburi_optiune-calculat"
+                    >Valoare calculata</label
+                  >
+                </div>
+              </div>
+
+              <div class="row pt-3">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_distanta_tuburi-cunoscuta"
+                      >Distanța dintre tuburi (m)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_distanta_tuburi-cunoscuta"
+                      placeholder="Distanța dintre tuburi (m)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <div class="section_item-subcontent">
+                <div>
+                  <h3>
+                    1.1 Timpul de difuziune orizontală capilară a apei de-a
+                    lungul liniei de drenaj
+                  </h3>
+                  <div class="row pt-3">
+                    <div class="form_input-wrapper">
+                      <div class="form_control">
+                        <label for="irigatie_lungimea_liniei_drenaj"
+                          >Lungimea liniei de drenaj</label
+                        >
+                        <input
+                          type="number"
+                          id="irigatie_lungimea_liniei_drenaj"
+                          placeholder="Lungimea liniei de drenaj"
+                        />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                      </div>
+                    </div>
+                    <div class="form_input-wrapper">
+                      <div class="form_control">
+                        <label for="irigatie_inaltimea_ridicarii_capilare"
+                          >Inălțimea ridicării capilare</label
+                        >
+                        <input
+                          type="number"
+                          id="irigatie_inaltimea_ridicarii_capilare"
+                          placeholder="Inălțimea ridicării capilare"
+                        />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                      </div>
+                    </div>
+                    <div class="form_input-wrapper">
+                      <div class="form_control">
+                        <label for="irigatie_coeficient_conductibilitate-tub"
+                          >Coeficient de conductibilitate al apei din tub</label
+                        >
+                        <input
+                          type="number"
+                          id="irigatie_coeficient_conductibilitate-tub"
+                          placeholder="Coeficient conductibilitate tub"
+                        />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_rezultat calcul_rezultate subcontent">
+                    <h3 id="irigatie_rezultat_distanta-tuburi-txt">
+                      Distanta tuburi (m)
+                    </h3>
+                    <input
+                      type="text"
+                      id="results_irigatie_distanta_tuburi"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>2. Debitul de apa la irigarea subterana</h3>
+              </div>
+              <div class="radio_btns">
+                <div class="select_options">
+                  <h3>Selectati optiunea</h3>
+                </div>
+                <div>
+                  <input
+                    class="radio_input"
+                    type="radio"
+                    value="Irigare Subterana Continua"
+                    name="irigatie_subterana_optiuni"
+                    id="irigatie_subterana_optiune-continua"
+                  />
+                  <label
+                    class="radio_label"
+                    for="irigatie_subterana_optiune-continua"
+                    >Irigare Subterana Continua</label
+                  >
+                  <input
+                    class="radio_input"
+                    type="radio"
+                    value="Irigare Subterana Periodica"
+                    name="irigatie_subterana_optiuni"
+                    id="irigatie_subterana_optiune-periodica"
+                  />
+                  <label
+                    class="radio_label"
+                    for="irigatie_subterana_optiune-periodica"
+                    >Irigare Subterana Periodica</label
+                  >
+                </div>
+              </div>
+              <div class="row pt-5">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_subterana-lungime-tuburi"
+                      >Lungime tuburi</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_subterana-lungime-tuburi"
+                      placeholder="Lungime tuburi"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_subterana_consum_apa_evapotranspiratie"
+                      >Consum apa evapotranspiratie (m3/m2*zi)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_subterana_consum_apa_evapotranspiratie"
+                      placeholder="Consum apa prin evapotranspiratie"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_subterana_norma_udare_necesara"
+                      >Norma de udare necesara (m3/ha)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_subterana_norma_udare_necesara"
+                      placeholder="Norma de udare necesara (m3/ha)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_subterana_durata_udarii"
+                      >Durata udarii (zile)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_subterana_durata_udarii"
+                      placeholder="Durata udarii (zile)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <!-- Line separating the input and rezult -->
+              <div class="separator_inputs-results"></div>
+              <!-- the result -->
+              <div class="row">
+                <div class="form_calcul">
+                  <button class="btn btn_calcul" id="btnCalc_irigare_subterana">
+                    Calculeaza
+                  </button>
+                </div>
+                <div class="form_rezultat calcul_rezultate">
+                  <h3 id="irigatie_subterana_rezultat-txt">Debit apa (l/s)</h3>
+                  <input type="text" id="results_irigare_subterana" disabled />
+                </div>
+                <div class="form_calcul">
+                  <button
+                    class="btn btn_anuleaza"
+                    id="btnAnuleaza_irigare_subterana"
+                  >
+                    Anuleaza
+                  </button>
+                </div>
+                <div class="form_calcul">
+                  <button
+                    class="btn btn_salveaza tooltip"
+                    id="btnSaveToDB_irigare_subterana"
+                  >
+                    Salveaza<span class="tooltiptext"
+                      >Functional doar cind este conectare la baza de date</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="section_item">
+        <h2 class="section_item-title">Irigarea culturilor pomicole</h2>
+      </div>
+      <div class="section_item-content">
+        <p>
+          Consumul de apa al pomilor este in general mare, exprimat prin
+          coeficientul de transpiratie. Acest coeficient are valori intre 250 –
+          300, atingind si 500 – 600.
+          <br />
+          Prin consum de apa se intelege evapotranspiratia (ET), adica
+          cantitatea de apa evaporata si transpirata care se exprima in mm sau
+          in m3/ha/zi. Consumul zilnic de apa la speciile pomicole variaza in
+          functie de specii, portaltoi, fenofazele de vegetatie (între 4 – 7
+          mm).
+          <br />
+          Necesarul de apa al culturilor irigate se evalueaza prin intermediul
+          unor indici si reprezinta elemente de calcul in dimensionarea
+          sistemelor de irigatie (dimensionarea debitului si volumului de apa
+          necesar a fi transportat, a duratei de irigare necesara pentru a
+          acoperi deficitul constatat).
+        </p>
+        <br />
+        <div class="form_input_group py-1">
+          <form>
+            <fieldset>
+              <legend>Norma de irigare</legend>
+              <div class="row pt-3">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_et-potentiala"
+                      >ET potentiala (m3/ha)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_et-potentiala"
+                      placeholder="ET potentiala (m3/ha)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_rezerva-finala"
+                      >Rezerva finala a apei (m3/ha)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_rezerva-finala"
+                      placeholder="Rezerva finala a apei (m3/ha)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_rezerva-initiala"
+                      >Rezerva initiala a apei (m3/ha)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_rezerva-initiala"
+                      placeholder="Rezerva initiala a apei (m3/ha)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_suma-precipitatiilor"
+                      >Suma precipitatiilor</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_suma-precipitatiilor"
+                      placeholder="Suma precipitatiilor"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3>Norma de irigare (m3/ha)</h3>
+                <input
+                  type="text"
+                  id="results_irigatie_pomicula-norma_irigare"
+                  disabled
+                />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="form_input_group py-1">
+          <form>
+            <fieldset>
+              <legend>Norma de udare neta</legend>
+              <div class="row pt-3">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_grosime_strat_sol"
+                      >Grosimea stratului de sol (m)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_grosime_strat_sol"
+                      placeholder="Grosimea stratului de sol (m)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_greutate_volumetrica"
+                      >Greutatea volumetrică (t/m3)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_greutate_volumetrica"
+                      placeholder="Greutatea volumetrică (t/m3)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_capacitate_camp"
+                      >Capacitatea de camp (%)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_capacitate_camp"
+                      placeholder="Capacitatea de camp (%)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_rezerva_apei"
+                      >Rezerva apei (%)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_rezerva_apei"
+                      placeholder="Rezerva apei (%)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3>Norma de udare neta (m3/ha)</h3>
+                <input
+                  type="text"
+                  id="results_irigatie_pomicula-norma_udare_neta"
+                  disabled
+                />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="form_input_group py-1">
+          <form>
+            <fieldset>
+              <legend>Intervalul de timp intre udari</legend>
+              <p class="py-1">
+                Necesita norma de udare care se calculeaza mai sus.
+              </p>
+              <div class="row row-centre pt-3">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_cantitate_precipitatii"
+                      >Cantitatea de precipitatii (m3/ha)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_cantitate_precipitatii"
+                      placeholder="Cantitatea de precipitatii (m3/ha)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_evapotranspiratie_zilnica"
+                      >Evapotranspiratia medie zilnica (m3/zi/ha)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_evapotranspiratie_zilnica"
+                      placeholder="Evapotranspiratia medie zilnica (m3/zi/ha)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3>Intervalul de timp între udari (zile)</h3>
+                <input
+                  type="text"
+                  id="results_irigatie_pomicula_interval_timp"
+                  disabled
+                />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="form_input_group py-1">
+          <form>
+            <fieldset>
+              <legend>Debitul specific pentru culturi</legend>
+              <p class="py-1">Necesita norma de udare calculata mai sus.</p>
+              <div class="row row-centre pt-3">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_pomicula_dimensionare_sistem_timp-max"
+                      >Timpul din luna cu consum maxim (zile)</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_pomicula_dimensionare_sistem_timp-max"
+                      placeholder="Timpul din luna cu consum maxim (zile)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3>Debitul specific de apa (l/s/ha)</h3>
+                <input
+                  type="text"
+                  id="results_irigatie_pomicula_debit_specific"
+                  disabled
+                />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="section_item">
+        <h2 class="section_item-title">Irigarea culturilor agricole</h2>
+      </div>
+      <div class="section_item-content">
+        <div class="form_input_group py-1">
+          <form>
+            <fieldset>
+              <legend>Evapotranspirația potențială de referință (ET0)</legend>
+              <p>
+                Evapotranspirația potențială este un parametru important al ciclului 
+                terestru al apei. Ea înseamnă evaporarea maximă posibilă independentă 
+                de cantitatea de apă pe care o au la dispoziție efectivă plantele. 
+                Ea este considerată drept un indicator de dezvoltare optimă a 
+                vegetației și joacă un rol capital  pentru evaluarea aptitudinilor 
+                climatice a unei regiuni pentru agricultură. Aprecierea 
+                evapotranspirației potențiale este necesară îndeosebi pentru 
+                estimarea necesarului de apă pentru irigarea agriculturii.
+              </p>
+              <div class="row pt-3">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_agricola-irigare"
+                      >Irigare</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_agricola-irigare"
+                      placeholder="Irigare"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_agricola-precipitatii"
+                      >Precipitatii utile</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_agricola-precipitatii"
+                      placeholder="Precipitatii utile"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_agricola-drenaj"
+                      >Drenaj</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_agricola-drenaj"
+                      placeholder="Drenaj"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_agricola-rezerva"
+                      >Rezerva de apă în zona radiculară</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_agricola-rezerva"
+                      placeholder="Rezerva"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3>Evapotranspirația potențială de referință (mm/zi)</h3>
+                <input
+                  type="text"
+                  id="results_irigatie_agricola-et0"
+                  disabled
+                />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="section_item-content">
+        <div class="form_input_group py-1">
+          <form>
+            <fieldset>
+              <legend>Necesarul de apă net (Nnet) si brut (Nbrut)</legend>
+              <div class="radio_btns">
+                <div class="select_options">
+                  <h3>Selectati optiunea</h3>
+                </div>
+                <div>
+                  <input
+                    class="radio_input"
+                    type="radio"
+                    value="Nnet"
+                    name="irigatie_agricola_necesarul_apa-optiuni"
+                    id="irigatie_agricola_optiune-Nnet"
+                  />
+                  <label
+                    class="radio_label"
+                    for="irigatie_agricola_optiune-Nnet"
+                    >N(net)</label
+                  >
+                  <input
+                    class="radio_input"
+                    type="radio"
+                    value="Nbrut"
+                    name="irigatie_agricola_necesarul_apa-optiuni"
+                    id="irigatie_agricola_optiune-Nbrut"
+                  />
+                  <label
+                    class="radio_label"
+                    for="irigatie_agricola_optiune-Nbrut"
+                    >N(brut)</label
+                  >
+                </div>
+              </div>
+              <div class="row pt-3">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_agricola-coeficientul-culturii"
+                      >Coeficientul culturii</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_agricola-coeficientul-culturii"
+                      placeholder="Coeficientul culturii"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_agricola-evaporatie-referinta"
+                      >Evapotranspirația de referință</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_agricola-evaporatie-referinta"
+                      placeholder="ET0"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_agricola-precipitatii-utile"
+                      >Precipitatii utile</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_agricola-precipitatii-utile"
+                      placeholder="Precipitatii utile"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_agricola-eficienta-parcelei"
+                      >Eficiența parcelei</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_agricola-eficienta-parcelei"
+                      placeholder="Eficienta parcelei"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="irigatie_agricola-eficienta-retelei"
+                      >Eficiența rețelei</label
+                    >
+                    <input
+                      type="number"
+                      id="irigatie_agricola-eficienta-retelei"
+                      placeholder="Eficienta retelei"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3 id="irigatie_agricola_rezultat-txt">Necesarul de apa</h3>
+                <input
+                  type="text"
+                  id="results_irigatie_agricola-necesarul-apa"
+                  disabled
+                />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Acvacultura -->
+    <section class="section" id="acvacultura">
+      <h2 class="section_header">Acvacultura</h2>
+      <div class="section_header-bottom_line"></div>
+      <div class="section_item">
+        <h2 class="section_item-title">
+          Calculul debitelor și volumelor necesare alimentării cu apă a obiectivului piscicol
+        </h2>
+      </div>
+      <div class="section_item-content">
+        <p class="py-1">
+          Regimul de funcționare al amenajării piscicole este de 365 zile/an. Necesarul de apă 
+          se calculeaza în baza prevederilor legale în vigoare (STAS 1343/5-96) 
+          prin însumarea necesarului pe categorii, calculat în funcție de normele 
+          specifice de consum. 
+        </p>
+        <p>
+          Prevederile STAS 1343/5-96 precizează pentru amenajările piscicole un necesar anual de apă cu o limită maximă de 5 l/s∙ha.
+        </p>
+        <br />
+        <div class="form_input_group py-1">
+          <form>
+            <fieldset>
+              <legend>Evaluarea necesarului de apă</legend>
+              <div>
+                <h3>1. Volumul de umplere (m3)</h3>
+                <p class="text">
+                  Volumul captat (necesarul de apă) pentru umplere este determinat 
+                  in funcție de cerința ihtiologică, ținând cont de durata umplerii 
+                  bazinului și debitul disponibil al sursei de apă.
+                </p>
+              </div>
+              <div class="row pt-1">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="acvacultura_suprafata-bazinului"
+                      >Suprafata bazinului (m2)</label
+                    >
+                    <input
+                      type="number"
+                      id="acvacultura_suprafata-bazinului"
+                      placeholder="Suprafata bazinului (m2)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="acvacultura_inaltimea"
+                      >Inaltimea (m)</label
+                    >
+                    <input
+                      type="number"
+                      id="acvacultura_inaltimea"
+                      placeholder="Inaltimea (m)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3>Volumul de umplere (m3)</h3>
+                <input
+                  type="text"
+                  id="results_acvacultura_volum-umplere"
+                  disabled
+                />
+              </div>
+              <div>
+                <h3>2. Volumul de apă de împrospătare (m3)</h3>
+                <p class="text">
+                  Necesarul de apă pentru primenire se calculează în funcție de producția de pește/an, 
+                  pe unitatea de suprafață și trebuie să fie de maxim 5 l/s∙ha.
+                </p>
+              </div>
+              <div class="row pt-3">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="acvacultura_necesarul-apa"
+                      >Necesarul de apa pe unitate de suprafata (l/s ha)</label
+                    >
+                    <input
+                      type="number"
+                      id="acvacultura_necesarul-apa"
+                      placeholder="Max 5 l/s ha"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="acvacultura_suprafata-bazinului-2"
+                      >Suprafata bazinului (ha)</label
+                    >
+                    <input
+                      type="number"
+                      id="acvacultura_suprafata-bazinului-2"
+                      placeholder="Suprafata bazinului (ha)"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="acvacultura_timpul_improspatare-totala"
+                      >Timpul de împrospătare totală (zile)</label
+                    >
+                    <input
+                      type="number"
+                      id="acvacultura_timpul_improspatare-totala"
+                      placeholder="Zile"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3>Volumul de apă de împrospătare (m3)</h3>
+                <input
+                  type="text"
+                  id="results_acvacultura_volum-improspatare"
+                  disabled
+                />
+              </div>
+              <div>
+                <h3>3. Volumul de apă pentru primenire (m3/an)</h3>
+                <p class="text">
+                  Volumul de apă pentru primenire 
+                  se calculează utilizind Volumul de apă de împrospătare
+                  calculat mai sus (p. 2) si Timpul maxim de împrospătare 
+                  totală a volumului de apă introdus in calculul Volumului de apa de împrospătare. 
+                </p>
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3>Volumul de apă pentru primenire (m3/an)</h3>
+                <input
+                  type="text"
+                  id="results_acvacultura_volum-primenire"
+                  disabled
+                />
+              </div>
+              <div>
+                <h3>4. Necesarul de apă pentru compensarea pierderilor naturale de apă (m3)</h3>
+                <p class="text">
+                  Necesarul de apă pentru compensarea pierderilor naturale de apă se calculeaza luind in consideratie pierderile 
+                  datorate evaporației și infitrației apei prin sol in % si Volumul de apa pentru primenire calculat mai sus (p. 3).
+                </p>
+              </div>
+              <div class="row pt-3">
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="acvacultura_pierderi-evaporatie"
+                      >Pierderi prin evaporație (%)</label
+                    >
+                    <input
+                      type="number"
+                      id="acvacultura_pierderi-evaporatie"
+                      placeholder="%"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form_input-wrapper">
+                  <div class="form_control">
+                    <label for="acvacultura_pierderi-infiltratie"
+                      >Pierderi prin infiltrație în sol (%)</label
+                    >
+                    <input
+                      type="number"
+                      id="acvacultura_pierderi-infiltratie"
+                      placeholder="%"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <div class="form_rezultat calcul_rezultate subcontent">
+                <h3>Volumul pentru compensarea pierderilor naturale de apă (m3/an)</h3>
+                <input
+                  type="text"
+                  id="results_acvacultura_volum-compensare-pierderi"
+                  disabled
+                />
+              </div>
+              <div>
+                <h3>5. Necesarul de apă total pentru bazin (m3/an)</h3>
+                <p class="text">
+                  Necesarul de apă total pe an se calculează în baza prevederilor legale în vigoare 
+                  (STAS 1343/5-96) prin însumarea necesarului pe categorii, calculat în funcție 
+                  de normele specifice de consum.
+                  <br>
+                  <br>
+                  Necesarul de apă total = Volumul de umplere + Volumul pentru primenire + Volumul pentru compensarea pierderilor naturale de apă
+                </p>
+              </div>
+              <!-- Line separating the input and rezult -->
+              <div class="separator_inputs-results"></div>
+              <!-- the result -->
+              <div class="row">
+                <div class="form_calcul">
+                  <button
+                    class="btn btn_calcul"
+                    id="btnCalc_acvacultura_volum-total"
+                  >
+                    Calculeaza
+                  </button>
+                </div>
+                <div class="form_rezultat calcul_rezultate">
+                  <h3>
+                    Necesarul total de apa pentru bazin (m3/an):
+                  </h3>
+                  <input
+                    type="text"
+                    id="results_acvacultura_volum-total"
+                    disabled
+                  />
+                </div>
+                <div class="form_calcul">
+                  <button
+                    class="btn btn_anuleaza"
+                    id="btnAnuleaza_acvacultura_volum-total"
+                  >
+                    Anuleaza
+                  </button>
+                </div>
+                <div class="form_calcul">
+                  <button
+                    class="btn btn_salveaza tooltip"
+                    id="btnSaveToDB_acvacultura_volum-total"
+                  >
+                    Salveaza<span class="tooltiptext"
+                      >Functional doar cind este conectare la baza de
+                      date</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Populatie -->
+    <section class="section" id="populatie">
+      <h2 class="section_header">Populatie</h2>
+      <div class="section_header-bottom_line"></div>
+      <div class="section_item">
+        <h2 class="section_item-title">
+          Limitele de alimentare cu apă a populației
+        </h2>
+        <div class="section_item-content">
+          <p class="py-1">
+            Limitele de alimentare cu apă mai pot fi numite cerințe de apă –
+            cantitățile de apă care trebuie prevăzute dintr-o sursă pentru
+            satisfacerea tuturor nevoilor (necesarului) raționale de apă a
+            beneficiarilor/utilizatorilor.
+          </p>
+          <p>
+            Necesarul de apă nu este același nici în timpul anului, nici de-a
+            lungul anilor, iarna necesarul este mai scăzut, iar vara mai
+            ridicat. Pentru a calcula cerinta de apa, mai intii este necesar de
+            calculat debitul zilnic mediu, sau debitul zilnic maxim.
+          </p>
+          <div class="form_input_group py-1">
+            <form>
+              <fieldset>
+                <legend>Debite Caracteristice</legend>
+                <div class="radio_btns">
+                  <div class="select_options">
+                    <h3>Selectati optiunea</h3>
+                  </div>
+                  <div>
+                    <input
+                      class="radio_input"
+                      type="radio"
+                      value="Debitul zilnic mediu"
+                      name="debit-caracteristic"
+                      id="populatie_debit-mediu"
+                    />
+                    <label class="radio_label" for="populatie_debit-mediu"
+                      >Debitul zilnic mediu</label
+                    >
+                    <input
+                      class="radio_input"
+                      type="radio"
+                      value="Debitul zilnic maxim"
+                      name="debit-caracteristic"
+                      id="populatie_debit-maxim"
+                    />
+                    <label class="radio_label" for="populatie_debit-maxim"
+                      >Debitul zilnic maxim</label
+                    >
+                  </div>
+                </div>
+                <div class="row pt-5">
+                  <div class="form_input-wrapper">
+                    <div class="form_control">
+                      <label for="populatie_debcaracter_numar-consumatori"
+                        >Numar consumatori</label
+                      >
+                      <input
+                        type="text"
+                        id="populatie_debcaracter_numar-consumatori"
+                        placeholder="Numar consumatori"
+                      />
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error Message</small>
+                    </div>
+                  </div>
+                  <div class="form_input-wrapper">
+                    <div class="form_control">
+                      <label for="populatie_debcaracter_debit-specific"
+                        >Debit specific (l/persoana.zi)</label
+                      >
+                      <input
+                        type="text"
+                        id="populatie_debcaracter_debit-specific"
+                        placeholder="Valori intre 30 si 250"
+                      />
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error Message</small>
+                    </div>
+                  </div>
+                  <div class="form_input-wrapper">
+                    <div class="form_control">
+                      <label for="populatie_debcaracter_coeficient-variatie"
+                        >Coeficient de variatie</label
+                      >
+                      <input
+                        type="text"
+                        id="populatie_debcaracter_coeficient-variatie"
+                        placeholder="Valori intre 1.2 si 2"
+                      />
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error Message</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- Line separating the input and rezult -->
+                <div class="separator_inputs-results"></div>
+                <!-- the result -->
+                <div class="row">
+                  <div class="form_calcul">
+                    <button
+                      class="btn btn_calcul"
+                      id="btnCalc_populatie_debit-caracteristic"
+                    >
+                      Calculeaza
+                    </button>
+                  </div>
+                  <div class="form_rezultat calcul_rezultate">
+                    <h3 id="populatie_rezultat_debit-caracteristic">
+                      Debit caracteristic (m3/zi):
+                    </h3>
+                    <input
+                      type="text"
+                      id="results_populatie_debit-caracteristic"
+                      disabled
+                    />
+                  </div>
+                  <div class="form_calcul">
+                    <button
+                      class="btn btn_anuleaza"
+                      id="btnAnuleaza_populatie_debit-caracteristic"
+                    >
+                      Anuleaza
+                    </button>
+                  </div>
+                  <div class="form_calcul">
+                    <button
+                      class="btn btn_salveaza tooltip"
+                      id="btnSaveToDB_populatie_debit-caracteristic"
+                    >
+                      Salveaza<span class="tooltiptext"
+                        >Functional doar cind este conectare la baza de
+                        date</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <br />
+          <div class="form_input_group py-1">
+            <form>
+              <fieldset>
+                <legend>Cerinta de apa</legend>
+                <p>
+                  Cerinta de apa se calculeaza utilizind valorile debitului
+                  zilnic mediu sau maxim calculat in sectia Debite
+                  Caracteristice.
+                </p>
+                <br />
+                <div class="row">
+                  <div class="form_input-wrapper">
+                    <div class="form_control">
+                      <label for="populatie_coeficient-spor"
+                        >Coeficient de Spor</label
+                      >
+                      <input
+                        type="number"
+                        id="populatie_coeficient-spor"
+                        placeholder="valori intre 1.02 si 1.08"
+                      />
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error Message</small>
+                    </div>
+                  </div>
+                  <div class="form_input-wrapper">
+                    <div class="form_control">
+                      <label for="populatie_coeficient-pierderi"
+                        >Coeficient de Pierderi</label
+                      >
+                      <input
+                        type="number"
+                        id="populatie_coeficient-pierderi"
+                        placeholder="valori intre 1.08 si 1.5"
+                      />
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error Message</small>
+                    </div>
+                  </div>
+                  <div class="form_input-wrapper">
+                    <div class="form_control">
+                      <label for="populatie_consum-zi">Necesarul total m3/zi</label>
+                      <input
+                        type="number"
+                        id="populatie_consum-zi"
+                        placeholder="Necesarul total m3/zi"
+                      />
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error Message</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- Line separating the input and rezult -->
+                <div class="separator_inputs-results"></div>
+                <!-- the result -->
+                <div class="row">
+                  <div class="form_calcul">
+                    <button
+                      class="btn btn_calcul"
+                      id="btnCalc_populatie_cerinta-apa"
+                    >
+                      Calculeaza
+                    </button>
+                  </div>
+                  <div class="form_rezultat calcul_rezultate">
+                    <h3>Cerinta de apa (m3/zi):</h3>
+                    <input
+                      type="text"
+                      id="results_populatie_cerinta-apa"
+                      disabled
+                    />
+                  </div>
+                  <div class="form_calcul">
+                    <button
+                      class="btn btn_anuleaza"
+                      id="btnAnuleaza_populatie_cerinta-apa"
+                    >
+                      Anuleaza
+                    </button>
+                  </div>
+                  <div class="form_calcul">
+                    <button
+                      class="btn btn_salveaza tooltip"
+                      id="btnSaveToDB_populatie_cerinta-apa"
+                    >
+                      Salveaza<span class="tooltiptext"
+                        >Functional doar cind este conectare la baza de
+                        date</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <br />
+        </div>
+      </div>
+      <div class="section_item">
+        <h2 class="section_item-title">
+          Calculul evacuării apei (canalizarea)
+        </h2>
+        <div class="section_item-content">
+          <p class="py-1">
+            Debitele de ape de canalizare sunt determinate ținând cont de
+            dezvoltarea folosințelor de apă în perspectivă, precum și de
+            schițele de sistematizare a centrelor populate și de prognozele
+            dezvoltării unităților economice, etc. Debitele medii zilnice de ape
+            uzate din centrele populate (Qzi med) sunt determinate ca suma
+            debitelor de ape de la:
+              <ul >
+                <li>- Clădiri de locuit și clădiri sociale</li>
+                <li>- Întreprinderi industriale și agricole</li>
+                <li>- Întreprinderi locale de deservire a populației</li>
+              </ul>
+          </p>
+          <br />
+          <div class="form_input_group py-1">
+            <form>
+              <fieldset>
+                <legend>Debitul mediu zilnic de ape uzate din centrele populate </legend>
+                <p>
+                  Pentru sistemele de canalizare a centrelor populate, debitele specifice medii anuale de ape uzate menajere de la 
+                  clădirile de locuit vor fi adoptate egale cu debitele cerințelor respective de apă, prezentate în capitolul anterior, 
+                  fiind excluse debitele de apă pentru spălarea teritoriului și udarea spațiilor verzi.
+                </p>
+                <br>
+                  <p>
+                    Debitul mediu zilnic de ape uzate de la întreprinderi industriale și 
+                    agricole se determină conform datelor tehnologice în funcție de genul 
+                    de activitate și gradul de recirculare a apei.
+                  </p>
+                  <br>
+                  <p>Debitul mediu zilnic de ape uzate de la întreprinderi locale de deservire a 
+                    populației se admite a fi considerate suplimentar în volum de 5% din debitul mediu total al localității respective.</p>
+                  <br>
+                  <p>Debitul maxim zilnic (de calcul) de ape uzate este determinat ca produsul debitului zilnic mediu cu 
+                    coeficientul de variație zilnică (Kzi max) indicat în SNiP 2.04.02-84 care variază între 1,1 ÷ 1,3 
+                    în funcție de modul de viață format al populației.</p>
+                <br />
+                <div class="row">
+                  <div class="form_input-wrapper">
+                    <div class="form_control">
+                      <label for="populatie_ape_uzate-populatie"
+                        >Ape uzate menajere de la clădirile de locuit (m3/zi)</label
+                      >
+                      <input
+                        type="number"
+                        id="populatie_ape_uzate-populatie"
+                        placeholder="Consum mediu m3/zi"
+                      />
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error Message</small>
+                    </div>
+                  </div>
+                  <div class="form_input-wrapper">
+                    <div class="form_control">
+                      <label for="populatie_ape_uzate-industrie"
+                        >Intreprinderi industriale (m3/zi)</label
+                      >
+                      <input
+                        type="number"
+                        id="populatie_ape_uzate-industrie"
+                        placeholder="Consum mediu m3/zi"
+                      />
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error Message</small>
+                    </div>
+                  </div>
+                  <div class="form_input-wrapper">
+                    <div class="form_control">
+                      <label for="populatie_ape_uzate-deservire">Intreprinderi locale de deservire a populației (m3/zi)</label>
+                      <input
+                        type="number"
+                        id="populatie_ape_uzate-deservire"
+                        placeholder="Consum mediu m3/zi"
+                      />
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error Message</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- Line separating the input and rezult -->
+                <div class="separator_inputs-results"></div>
+                <!-- the result -->
+                <div class="row">
+                  <div class="form_rezultat calcul_rezultate">
+                    <h3>Debitul mediu zilnic de ape uzate din centrele populate (m3/zi):</h3>
+                    <input
+                      type="text"
+                      id="results_populatie_ape-uzate"
+                      disabled
+                    />
+                  </div>
+                  <div class="form_calcul">
+                    <button
+                      class="btn btn_anuleaza"
+                      id="btnAnuleaza_populatie_ape-uzate"
+                    >
+                      Anuleaza
+                    </button>
+                  </div>
+                  <div class="form_calcul">
+                    <button
+                      class="btn btn_salveaza tooltip"
+                      id="btnSaveToDB_populatie_ape-uzate"
+                    >
+                      Salveaza<span class="tooltiptext"
+                        >Functional doar cind este conectare la baza de
+                        date</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <br />
+        </div>
+      </div>
+    </section>
+    <!-- Section: Industrie -->
+
+    <!-- Section: Agricultura -->
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
